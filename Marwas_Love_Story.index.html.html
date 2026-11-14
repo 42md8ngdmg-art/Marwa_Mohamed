@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="حكاية حب محمد ومروة، بدأت يوم 28 يوليو 2021 وما زالت مستمرة.">
+  <title>Marwa’s Love Story ❤️</title>
+  <style>
+    :root{--gold:#d8b56a;--gold2:#f4dfaa;--ink:#080808;--muted:#b9ad95}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--ink)}
+    body{margin:0;background:radial-gradient(ellipse at 50% 0%,#241b0b 0%,#0b0a08 38%,#050505 100%);color:#f7f0e2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.9;overflow-x:hidden}
+    button,a{font:inherit}
+    a{color:inherit}
+    .intro{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:#050505;transition:opacity 1.15s ease,visibility 1.15s ease}
+    .intro.done{opacity:0;visibility:hidden;pointer-events:none}
+    .intro-inner{text-align:center;padding:24px}
+    .heart{font-size:clamp(82px,22vw,150px);line-height:1;display:inline-block;color:var(--gold);filter:drop-shadow(0 0 22px #d8b56a88);animation:pulse 1.2s ease-in-out infinite}
+    .intro.zoom .heart{animation:zoomAway 1.2s cubic-bezier(.2,.8,.2,1) forwards}
+    .intro-caption{margin-top:22px;color:var(--gold2);letter-spacing:2px;font-size:13px;opacity:.85}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+    @keyframes zoomAway{0%{transform:scale(1);opacity:1}100%{transform:scale(9);opacity:0}}
+    .site{opacity:0;transform:translateY(14px);transition:opacity 1.2s ease,transform 1.2s ease}
+    .site.visible{opacity:1;transform:none}
+    .wrap{width:min(900px,100%);margin:auto;padding:0 22px}
+    header{min-height:100svh;display:flex;align-items:center;text-align:center;padding:88px 0 70px;position:relative}
+    .eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px;text-transform:uppercase}
+    h1{font-size:clamp(38px,10vw,76px);line-height:1.25;margin:16px 0;color:var(--gold2);font-weight:700;text-shadow:0 5px 35px #d8b56a22}
+    .hero-copy{font-size:clamp(16px,4vw,20px);color:#e9dfca;max-width:650px;margin:0 auto}
+    .gold-line{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:30px auto}
+    .date-pill{display:inline-block;border:1px solid #b9944e88;border-radius:999px;padding:8px 18px;color:var(--gold2);font-size:14px;margin-top:24px}
+    .scroll-note{position:absolute;bottom:26px;left:0;right:0;color:#a99a7b;font-size:12px;animation:float 2s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(7px)}}
+    section{padding:74px 0;border-top:1px solid #d8b56a20}
+    .section-kicker{color:var(--gold);font-size:12px;letter-spacing:2px;text-align:center}
+    h2{text-align:center;color:var(--gold2);font-size:clamp(25px,6vw,38px);margin:8px 0 24px}
+    .prose{max-width:700px;margin:auto;text-align:center;color:#e7ddca;font-size:17px}
+    .counter{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:30px auto 0}
+    .count-box{padding:17px 8px;border:1px solid #b9944e55;border-radius:16px;background:linear-gradient(145deg,#1b160d,#0b0a08);box-shadow:0 12px 35px #0008}
+    .count-number{display:block;font-size:clamp(26px,7vw,42px);font-weight:700;color:var(--gold2);direction:ltr;font-variant-numeric:tabular-nums}
+    .count-label{font-size:12px;color:var(--muted)}
+    .memory-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:700px;margin:30px auto 0}
+    .memory{border:1px solid #b9944e44;border-radius:18px;padding:22px 20px;background:linear-gradient(135deg,#17130caa,#0b0a08)}
+    .memory h3{color:var(--gold);margin:0 0 8px;font-size:19px}
+    .memory p{margin:0;color:#d8cfbd}
+    .music-card{max-width:600px;margin:28px auto 0;padding:24px;border:1px solid #d8b56a66;border-radius:22px;text-align:center;background:linear-gradient(145deg,#20180b,#0c0b09);box-shadow:0 18px 50px #0008}
+    .music-icon{font-size:34px;color:var(--gold2)}
+    .music-card h3{margin:8px 0 2px;color:var(--gold2)}
+    .music-card p{color:#c9bda5;margin:0 0 18px;font-size:14px}
+    .listen{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:10px 22px;border-radius:999px;background:linear-gradient(135deg,#f1d99c,#b88d43);color:#171108;text-decoration:none;font-weight:700;box-shadow:0 8px 25px #d8b56a33}
+    .listen:focus-visible,a:focus-visible{outline:3px solid white;outline-offset:4px}
+    .small-note{font-size:12px!important;color:#a99b80!important;margin-top:13px!important}
+    .future{font-size:18px}
+    .finale{text-align:center;padding:95px 0 105px;background:radial-gradient(ellipse at center,#241b0b55,transparent 65%)}
+    .finale .closing{font-size:clamp(25px,7vw,42px);color:var(--gold2);font-weight:700;line-height:1.6}
+    .signature{color:#bda779;margin-top:18px}
+    footer{text-align:center;color:#82765f;font-size:11px;padding:18px 12px 30px}
+    @media(min-width:650px){.memory-grid{grid-template-columns:1fr 1fr}.memory:last-child{grid-column:1/-1}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="intro" id="intro" aria-label="مقدمة">
+    <div class="intro-inner">
+      <div class="heart" aria-hidden="true">♥</div>
+      <div class="intro-caption">A LITTLE SURPRISE FOR MARWA</div>
+    </div>
+  </div>
+
+  <main class="site" id="site">
+    <header>
+      <div class="wrap">
+        <div class="eyebrow">A STORY WRITTEN BY TWO HEARTS</div>
+        <h1>مروة…<br>إنتِ أجمل حكاياتي</h1>
+        <div class="gold-line"></div>
+        <p class="hero-copy">في حكايات بتبدأ صدفة، وتتحول لأجمل اختيار…<br>وحكايتي معاكي هي الحكاية اللي كل يوم بحب أعيشها من أول وجديد.</p>
+        <div class="date-pill">من يوم 28 يوليو 2021 ❤️</div>
+        <div class="scroll-note">كمّلي… لسه في كلام من القلب ↓</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">OUR TIME TOGETHER</div>
+        <h2>عدّى على حكايتنا</h2>
+        <p class="prose">من أول يوم جمعنا… وكل يوم بيعدّي بيزود في قلبي حكاية وذكرى وسبب جديد إني أختارك.</p>
+        <div class="counter" aria-label="الوقت منذ 28 يوليو 2021">
+          <div class="count-box"><span class="count-number" id="days">—</span><span class="count-label">يوم</span></div>
+          <div class="count-box"><span class="count-number" id="hours">—</span><span class="count-label">ساعة</span></div>
+          <div class="count-box"><span class="count-number" id="minutes">—</span><span class="count-label">دقيقة</span></div>
+        </div>
+        <p class="small-note" style="text-align:center;margin-top:14px">والعداد بيكمل… زي حكايتنا بالظبط.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">A LETTER FROM MY HEART</div>
+        <h2>لمروة… حبيبتي</h2>
+        <p class="prose">يا مروة، يمكن الكلام مهما كان حلو مش هيعرف يوصف مكانتك عندي، بس حبيت أعملك حاجة تفضل تفكّرك إنك مش مجرد شخص في حياتي… إنتِ جزء من أجمل تفاصيلها. وجودك فرق، وضحكتك بتطمن قلبي، وكل لحظة بينا ليها مكان مخصوص جوايا. أنا ممتن لكل يوم عرفتك فيه، ولكل مرة اخترنا نكمّل فيها سوا. بحبك، وبحب إن حكايتنا لسه بتكبر.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">OUR LITTLE UNIVERSE</div>
+        <h2>حكايتنا في 3 فصول</h2>
+        <div class="memory-grid">
+          <article class="memory">
+            <h3>✦ ذكرياتنا</h3>
+            <p>كل ضحكة، وكل خروجة، وكل كلام طال بينا… تفاصيل يمكن تعدّي عادي عند الدنيا، لكنها عندي عمر كامل من اللحظات الغالية.</p>
+          </article>
+          <article class="memory">
+            <h3>✦ حبنا</h3>
+            <p>الحب مش كلمة بنقولها وبس؛ الحب إننا نفضل نسمع بعض، ونطمن بعض، ونختار بعض حتى في الأيام الصعبة.</p>
+          </article>
+          <article class="memory">
+            <h3>✦ مستقبلنا</h3>
+            <p>نفسي نكمّل الطريق إيد في إيد، ونبني بيت مليان مودة وراحة وضحك، ونفضل نخلق ذكريات جديدة نفتكرها وإحنا كبرنا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">OUR SONG</div>
+        <h2>أغنية ليها حكاية</h2>
+        <div class="music-card">
+          <div class="music-icon" aria-hidden="true">♫</div>
+          <h3>بعيش على الذكرى — تامر حسني</h3>
+          <p>خلّي الأغنية دي تبقى موسيقى للحظاتنا الحلوة.</p>
+          <a class="listen" href="https://play.anghami.com/search?query=%D8%A8%D8%B9%D9%8A%D8%B4%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B0%D9%83%D8%B1%D9%89" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">▶</span> اسمعي أغنيتنا على أنغامي
+          </a>
+          <p class="small-note">التشغيل من منصة أنغامي الرسمية؛ قد تحتاجين إلى فتح التطبيق أو تسجيل الدخول.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-kicker">A PROMISE FOR TOMORROW</div>
+        <h2>واللي جاي أجمل بإذن الله</h2>
+        <p class="prose future">مش بوعدك إن كل يوم هيكون سهل، لكن أوعدك إني أفضل أحاول، وأسمعك، وأشاركك الحلو والصعب. نفسي كل سنة نرجع نفتكر يوم 28/07 ونبتسم، ونقول إن أجمل أيامنا لسه قدامنا.</p>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="wrap">
+        <div class="heart" aria-hidden="true" style="font-size:48px;animation:pulse 1.6s infinite">♥</div>
+        <div class="closing">دي مش نهاية الحكاية..<br>دي لسه البداية</div>
+        <div class="signature">بحبك يا مروة ❤️</div>
+      </div>
+    </section>
+    <footer>صُنعت بكل الحب… لمحمد ومروة ♡</footer>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+      var start = new Date(2021, 6, 28, 0, 0, 0);
+      var intro = document.getElementById("intro");
+      var site = document.getElementById("site");
+
+      function updateCounter() {
+        var now = new Date();
+        var diff = Math.max(0, now.getTime() - start.getTime());
+        var totalMinutes = Math.floor(diff / 60000);
+        var days = Math.floor(totalMinutes / 1440);
+        var hours = Math.floor((totalMinutes % 1440) / 60);
+        var minutes = totalMinutes % 60;
+        document.getElementById("days").textContent = days.toLocaleString("ar-EG");
+        document.getElementById("hours").textContent = hours.toLocaleString("ar-EG");
+        document.getElementById("minutes").textContent = minutes.toLocaleString("ar-EG");
+      }
+
+      updateCounter();
+      window.setInterval(updateCounter, 60000);
+
+      window.setTimeout(function () {
+        intro.classList.add("zoom");
+        window.setTimeout(function () {
+          intro.classList.add("done");
+          site.classList.add("visible");
+        }, 1200);
+      }, 2400);
+    }());
+  </script>
+</body>
+</html>
